@@ -1,49 +1,18 @@
 import React from "react";
-import { Icon, ListItem, List, Divider, Grid, Button } from "@material-ui/core";
+import { BottomNavigation, BottomNavigationAction, Icon } from "@material-ui/core";
 
 export default function Footer() {
+  const [value, setValue] = React.useState(0);
+  function handleChange(event, newValue) {
+    setValue(newValue);
+  }
   return (
-    <Grid container direction="row" justify="space-evenly">
-      <Grid item>
-        <Button variant="outlined" size="small">
-          <Grid container direction="column" alignItems="center">
-            <Icon>camera_alt</Icon>
-            <span>Shots</span>
-          </Grid>
-        </Button>
-      </Grid>
-      <Grid item>
-        <Button variant="outlined" size="small">
-          <Grid container direction="column" alignItems="center">
-            <Icon>camera_alt</Icon>
-            <span>Shots</span>
-          </Grid>
-        </Button>
-      </Grid>
-      <Grid item>
-        <Button variant="outlined" size="small">
-          <Grid container direction="column" alignItems="center">
-            <Icon>thumb_up</Icon>
-            <span>Likes</span>
-          </Grid>
-        </Button>
-      </Grid>
-      <Grid item>
-        <Button variant="outlined" size="small">
-          <Grid container direction="column" alignItems="center">
-            <Icon>camera_alt</Icon>
-            <span>Shots</span>
-          </Grid>
-        </Button>
-      </Grid>
-      <Grid item>
-        <Button variant="outlined" size="small">
-          <Grid container direction="column" alignItems="center">
-            <Icon>people</Icon>
-            <span>User</span>
-          </Grid>
-        </Button>
-      </Grid>
-    </Grid>
+    <BottomNavigation showLabels value={value} onChange={handleChange}>
+      <BottomNavigationAction label="Shots" icon={<Icon>camera_alt</Icon>} />
+      <BottomNavigationAction label="Something" icon={<Icon>camera_alt</Icon>} />
+      <BottomNavigationAction label="Likes" icon={<Icon>thumb_up</Icon>} />
+      <BottomNavigationAction label="Favorites" icon={<Icon>favorite</Icon>} />
+      <BottomNavigationAction label="Membership" icon={<Icon>people</Icon>} />
+    </BottomNavigation>
   );
 }
