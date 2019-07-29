@@ -16,9 +16,6 @@
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.1",
     "react-dom": "^16.8.6",
-    "react-redux": "^7.1.0",
-    "react-router": "^5.0.1",
-    "redux": "^4.0.1",
     "typeface-roboto": "^0.0.54"
   },
   "devDependencies": {

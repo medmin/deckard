@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NavBar from "@/components/common/NavBar";
 import Footer from "@/components/common/Footer";
 import { Container } from "@material-ui/core";
-import ProfileContainer from "@/components/profile/ProfileContainer";
+import CardGrid from "@/components/profile/CardGrid";
 import { withStyles } from "@material-ui/styles";
 import Profile from "./profile/Profile";
 
@@ -21,7 +21,7 @@ class App extends Component {
         <NavBar />
         <Container component="main" className={classes.root} direction="column">
           <Profile />
-          <ProfileContainer />
+          <CardGrid />
         </Container>
         <Container component="footer">
           <Footer />
