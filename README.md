@@ -8,4 +8,4 @@
 
 #### Screenshot
 
-![img](screenshot.png)
+![img](screenshot.PNG)
